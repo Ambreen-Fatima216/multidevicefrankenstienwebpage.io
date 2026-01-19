@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frankenstein | The Complete Archive</title>
+    <!--Adding the stylesheet-->
+    <link href="style.css" rel="stylesheet">
+    
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<!--Creating the Main Body of the Page-->
+<body>
+    <div id="flash-overlay" style="position: fixed; inset: 0; z-index: 100; pointer-events: none;"></div>
+    <!--Adding a background audio to suit the website-->
+    <audio id="bg-audio" loop>
+        <source src="Music/Frankenstein.mp3" type="audio/mpeg">
+    </audio>
+
+    <!--Creating the nav bar and creating a menu nav bar for mobile devices-->
+    <nav class="navbar">
+        <div class="nav-logo" onclick="showPage('home')">
+            <img src="Assets/Frankenstein_logo.png" alt="Frankenstein Archive Logo" class="logo-image">
+        </div> 
+
+        <div class="menu-icon" onclick="toggleMenu()">
+        <i class='bx bx-menu'></i>
+        </div>
+<!--Creating the nav links-->
+        </div> <div class="nav-links">
+            <a href="javascript:void(0)" onclick="showPage('home')" class="nav-link">Home</a>
+            <a href="#characters" class="nav-link">Characters</a>
+            <a href="#story-deck" class="nav-link">Creator</a>
+            <a href="#story-deck2" class="nav-link">Creature</a>
+            <div class="nav-divider"></div>
+            <a href="javascript:void(0)" onclick="showPage('login')" class="nav-link">Login</a>
+            <a href="javascript:void(0)" onclick="showPage('signup')" class="nav-link btn-signup">Sign Up</a>
+        </div>
+<!--Audio toggle button-->
+    </nav> <div class="audio-control" onclick="toggleAudio()" id="audio-btn">
+        <i class='bx bx-volume-full'></i>
+    </div>
+<!--Main content starts now-->
+    <main id="page-home" class="page-node active-page">
+        <section class="main">
+            <div class="main-bg">
+                <img src="Assets/Main.jpg" alt="Background">
+            </div>
+<!--Creating the main heading-->
+            <div class="main-content">
+                <h1 class="main-title">FRANKENSTEIN</h1>
+                <p class="main-subtitle">The story beyond death</p>
+                <button onclick="triggerLightning()" class="btn-initiate">
+                    <span>Initiate Life</span>
+                    <div class="bg-fill"></div>
+                </button>
+            </div>
+<!--Small Arrow icon that indicates to scroll down-->
+            <div class="main-scroll-icon">
+                <i class='bx bx-chevron-down'></i>
+            </div>
+        </section>
+<!--Characters Part-->
+        <section id="characters" class="bg-dark-alt" style="padding: 8rem 0; overflow: hidden;">
+            <div class="section-header">
+                <h2 class="section-title">The Main Characters</h2>
+                <div class="title-underline"></div>
+            </div>
+
+<!--Card no 1-->
+    <div class="carousel-container" id="character-carousel">
+        <div class="carousel-item" style="transform: rotateY(0deg) translateZ(450px);">
+            <div class="card-wrapper">
+                <img src="Assets/victor.avif" class="card-img">
+                <div class="card-overlay">
+                    <h3 class="card-name">Victor </h3>
+                    <p class="card-role">The Creator</p>
+                </div>
+            </div>
+        </div>
+
+<!--Card no 2-->
+        <div class="carousel-item" style="transform: rotateY(72deg) translateZ(450px);">
+            <div class="card-wrapper">
+                <img src="Assets/Creature.webp" class="card-img">
+                <div class="card-overlay">
+                    <h3 class="card-name">The Creature</h3>
+                    <p class="card-role">Adam of Death</p>
+                </div>
+            </div>
+        </div>
+        
+<!--Card no 3-->
+        <div class="carousel-item" style="transform: rotateY(144deg) translateZ(450px);">
+            <div class="card-wrapper">
+                <img src="Assets/Elizabeth.jpg" class="card-img">
+                <div class="card-overlay">
+                    <h3 class="card-name">Elizabeth </h3>
+                    <p class="card-role">The Innocent</p>
+                </div>
+            </div>
+        </div>
+
+<!--Card no 4-->
+        <div class="carousel-item" style="transform: rotateY(216deg) translateZ(450px);">
+            <div class="card-wrapper">
+                <img src="Assets/Captain.avif" class="card-img">
+                <div class="card-overlay">
+                    <h3 class="card-name">Captain Walton</h3>
+                    <p class="card-role">The Explorer</p>
+                </div>
+            </div>
+        </div>
+
+<!--Card no 5-->
+        <div class="carousel-item" style="transform: rotateY(288deg) translateZ(450px);">
+            <div class="card-wrapper">
+                <img src="Assets/William.jpg" class="card-img">
+                <div class="card-overlay">
+                    <h3 class="card-name">William</h3>
+                    <p class="card-role">The Victim</p>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--Arrow controls to scroll side wayz-->
+    <div class="carousel-controls" style="position: relative; z-index: 100;">
+        <button onclick="rotateCarousel(72)" class="control-btn"><i class='bx bx-left-arrow-alt'></i></button>
+        <button onclick="rotateCarousel(-72)" class="control-btn"><i class='bx bx-right-arrow-alt'></i></button>
+    </div>
+</section>
+
+<!--Creater part of the story -->
+        <section id="story-deck" class="bg-dark-alt" style="padding: 8rem 0;">
+            <div class="section-header">
+                <h2 class="section-title">Part 1: The Makers Tale</h2>
+                <p style="color: var(--teal-500); font-size: 0.75rem; letter-spacing: 0.5em; text-transform: uppercase;">THE SPIRAL INTO CREATION AND OBSESSION</p>
+            </div>
+
+<!--Chapter flashcard 1-->
+            <div class="chronicles-grid">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Assets/Young-Victor-Frankenstein-.webp" alt="Shadows of Innocence">
+                            <div class="content">
+                                <span class="num">Chapter I</span>
+                                <h3>Shadows of Innocence</h3>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h4>Early Childhood</h4>
+                            <p>Victor’s childhood in Geneva was gentle, yet marked early by death. His mother’s illness and passing left a hollow silence in the house, one that no comfort could fully fill. He became aware, too young, that life could disappear without warning. Instead of turning away, Victor leaned closer. He watched sickness claim the strong and leave the weak behind. Death frightened him, but it also fascinated him. Books became his refuge, especially those that promised answers about life’s beginnings. While other children mourned and moved on, Victor lingered in questions. Why did the body fail? Why could nothing bring it back? In those quiet years, grief planted the first seed of ambition. He did not yet dream of defying nature, but he began to believe that death was not sacred, only unexplained.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<!--Chapter flashcard 2-->
+<br>
+            <div class="chronicles-grid">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Assets/Ignition of Obsession.jpg" alt="Ignition of Obsession">
+                            <div class="content">
+                                <span class="num">Chapter 2</span>
+                                <h3>Ignition of Obsession</h3>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h4>Ignition of Obsession</h4>
+                            <p>At university, Victor felt limitless. Knowledge surrounded him, and for the first time, he felt powerful. Chemistry, anatomy, and electricity thrilled him. Professors warned of restraint, but Victor heard only fear. He worked obsessively, ignoring letters from home and neglecting sleep. The mystery of life consumed him completely. Each discovery pushed him further from ordinary humanity. Where others saw danger, Victor saw opportunity. His ambition no longer felt like curiosity; it felt like destiny. He believed he was meant to uncover what others feared to seek. Slowly, his purpose narrowed until nothing mattered except creation. In chasing knowledge, Victor did not notice how isolated he had become, nor how far he was drifting from compassion and responsibility.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<!--Chapter flashcard 3-->
+<br>
+            <div class="chronicles-grid">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Assets/Whisper of power.webp" alt="Whisper of Power">
+                            <div class="content">
+                                <span class="num">Chapter 3</span>
+                                <h3>Whisper of Power</h3>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h4>Whisper of Power</h4>
+                            <p>Victor’s work grew darker as his goal became clearer. He began visiting graveyards, slaughterhouses, and dissection rooms. Death surrounded him daily, yet he felt strangely numb to it. He selected body parts carefully, treating them like components rather than remnants of human lives. Each night, guilt whispered in his mind, but ambition shouted louder. Victor justified every action by imagining future praise and scientific glory. The more disturbing the work became, the more he withdrew from the world. He stopped seeing people as people, viewing them instead as fragile machines. By the time the body was complete, Victor no longer questioned whether he should proceed—only whether he could succeed.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<!--Chapter flashcard 4-->
+<br>
+            <div class="chronicles-grid">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Assets/The spark.webp" alt=" Isolation">
+                            <div class="content">
+                                <span class="num">Chapter 4</span>
+                                <h3>Isolation</h3>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h4>Isolation</h4>
+                            <p>Months passed without rest. Victor barely slept, ate, or spoke to anyone. His health declined, but his focus sharpened. The laboratory became his prison and sanctuary. He dreamed of electricity pulsing through lifeless flesh, of eyes opening where none should. Friends faded into memories. Even nature, once comforting, now felt distant. Victor told himself sacrifice was necessary for greatness. Each moment of doubt was crushed by the belief that he stood on the edge of discovery. He ignored the possibility of failure or consequence. In his mind, success justified everything. The closer he came to completion, the less human he felt, transformed by obsession long before his creation ever moved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<!--Chapter flashcard 5-->
+<br>
+            <div class="chronicles-grid">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Assets/night of animation.avif" alt="Night of Animation">
+                            <div class="content">
+                                <span class="num">Chapter 5</span>
+                                <h3>Night of Animation</h3>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h4>Night of Animation</h4>
+                            <p>On a storm-filled night, Victor finally succeeded. With trembling hands, he activated his experiment. Electricity surged, and the body before him stirred. Yellow eyes opened. Breath filled dead lungs. Life had returned—but not as Victor imagined. Instead of triumph, horror struck him instantly. The creature’s appearance repulsed him. What he once called beautiful science now felt monstrous. Overwhelmed with fear and regret, Victor fled the room, abandoning the being he had brought to life. The dream of glory shattered in seconds. In its place remained terror, guilt, and the unbearable realization that creation carried responsibility he was unprepared to face.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<!--Chapter flashcard 6-->
+<br>
+            <div class="chronicles-grid">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Assets/Cost of creation.webp" alt="The Cost of Creation">
+                            <div class="content">
+                                <span class="num">Chapter 6</span>
+                                <h3>The Cost of Creation</h3>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h4>The Cost of Creation</h4>
+                            <p>Victor spent days in illness and denial, refusing to face what he had done. When he returned, the creature was gone. Relief mixed with dread. He tried to convince himself the nightmare was over. Yet peace never returned. His mind replayed the moment of creation endlessly.
+                                Victor’s world began to collapse. News of death reached him, and he slowly understood the truth: his creation was alive and acting with purpose. Guilt consumed him. Each loss felt like his own crime. He realized knowledge without care had made him dangerous. Yet fear still stopped him from confessing. Victor wrestled with responsibility, shame, and terror. He wanted to destroy the creature but also knew the fault was his own. His ambition had unleashed suffering, and no amount of regret could undo it.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<!--Chapter flashcard 7-->
+<br>
+            <div class="chronicles-grid">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Assets/Elizabeth-with-Frankenstein-Creature.webp" alt="Pursuit and Despair">
+                            <div class="content">
+                                <span class="num">Chapter 7</span>
+                                <h3>Pursuit and Despair</h3>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h4>Pursuit and Despair</h4>
+                            <p>Victor’s world began to collapse completely with the loss of Elizabeth. She had been his closest companion since childhood, a symbol of warmth, kindness, and the life he once hoped to live. On the night meant to celebrate their future together, the creature took her from him. Her death was sudden and brutal, silencing the last light in Victor’s life. In that moment, Victor understood the full weight of his actions. By abandoning his creation, he had exposed everyone he loved to danger. Elizabeth’s death was not random violence; it was a consequence of Victor’s refusal to take responsibility. Grief consumed him, replacing fear with burning guilt and rage. From that point on, Victor lived only for revenge, knowing his ambition had destroyed the person who mattered most.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!--Chapter flashcard 8-->
+<br>
+            <div class="chronicles-grid">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Assets/victor pursuit.jpg" alt="Flight from Responsibility">
+                            <div class="content">
+                                <span class="num">Chapter 8</span>
+                                <h3>Flight from Responsibility</h3>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h4>Flight from Responsibility</h4>
+                            <p>Victor resolved to stop the creature, chasing it across lands consumed by exhaustion and rage. His life narrowed into a single goal. Love, comfort, and hope vanished. The pursuit destroyed what remained of his humanity. Victor no longer sought redemption, only an end. He believed destroying the creature might finally silence his guilt. But the chase drained him physically and emotionally. Each step forward felt heavier, each failure more crushing. Creation had turned creator into a prisoner of his own actions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<!--Chapter flashcard 9-->
+<br>
+            <div class="chronicles-grid">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Assets/victor dies.jpg" alt="The End of the Creator">
+                            <div class="content">
+                                <span class="num">Chapter 9</span>
+                                <h3>The End of the Creator</h3>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h4>The End of the Creator</h4>
+                            <p>Broken and weak, Victor reflected on his life. He recognized that ambition without compassion had ruined him. His desire to conquer death had only multiplied it. In his final moments, Victor understood that knowledge must be guided by responsibility. He warned others against following his path. Death claimed him not as a victor, but as a cautionary tale. His legacy was not creation, but consequence. Victor’s story did not end with his death. His choices lived on through the creature he abandoned. He became a symbol of unchecked ambition and moral blindness. Though brilliant, he failed to act with care. His life stands as a warning: creation demands accountability, and power without empathy leads only to destruction.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+<!--Creature Paart of the story-->
+        <section id="story-deck2" class="bg-dark-alt" style="padding: 8rem 0;">
+            <div class="section-header">
+                <h2 class="section-title">The Creatures Tale</h2>
+                <p style="color: var(--teal-500); font-size: 0.75rem; letter-spacing: 0.5em; text-transform: uppercase;">"YOU HEARD MY MAKERS TALE NOW YOU SHALL HEAR MINE"</p>
+            </div>
+
+<!--Chapter flashcard 1-->
+            <div class="chronicles-grid">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Assets/The Father’s Fear.webp" alt="The Father’s Fear">
+                            <div class="content">
+                                <span class="num">Chapter I</span>
+                                <h3>The Father’s Fear</h3>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h4>The Father’s Fear</h4>
+                            <p>My first breath was taken in a tower of cold stone, surrounded by the smell of scorched copper. I opened my eyes to see Victor, my maker. I did not know I was a "monster"; I only knew I was alive. I reached for him with a newborn’s hope, but he saw only a grotesque mirror of his own hubris. He did not embrace me; he chained me. He treated me with the same cold cruelty his own father, the Baron, had used on him. I learned the word "Victor" not as a name of love, but as a plea for mercy that never came. I was a god’s mistake, a collection of dead soldiers and criminals stitched together to satisfy one man's ego.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<!--Chapter flashcard 2-->
+<br>
+            <div class="chronicles-grid">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Assets/fire.jpg" alt="Rebirth in the Ashes">
+                            <div class="content">
+                                <span class="num">Chapter 2</span>
+                                <h3>Rebirth in the Ashes</h3>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h4>Rebirth in the Ashes</h4>
+                            <p>Victor tried to kill the thing he could not control. He set the laboratory ablaze, hoping the flames would erase his sin. I felt the heat lick my skin, yet I did not die; my body, forged from the dead, refused to return to the earth. I broke my bonds and stumbled into the German wilderness, a titan with the mind of a child. The sun was my first teacher, its warmth a contrast to the metal chains of my birth. But the world of men was no kinder than Victor. When hunters found me, they did not see a man; they saw a beast and fired. I realized then that my immortality was not a gift, but a prison.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<!--Chapter flashcard 3-->
+<br>
+            <div class="chronicles-grid">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Assets/blind man.jpg" alt="The Ghostly Guardian">
+                            <div class="content">
+                                <span class="num">Chapter 3</span>
+                                <h3>The Ghostly Guardian</h3>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h4>The Ghostly Guardian</h4>
+                            <p>I found a small hovel attached to a farm where a blind old man lived with his granddaughter. Through a crack in the wood, I watched them. They were poor and hungry, yet they shared a tenderness I had never known. I became their silent servant. In the dead of night, I chopped their wood and cleared the snow, basking in the joy my secret labor brought them. I began to steal their words, learning to speak and read. I saw myself in the pages of their books—a fallen being, alone in a world that had no name for me. For a brief time, I allowed myself to believe that a soul could be earned through kindness.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<!--Chapter flashcard 4-->
+<br>
+            <div class="chronicles-grid">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Assets/journal.webp" alt="The Bitter Silence of God">
+                            <div class="content">
+                                <span class="num">Chapter 4</span>
+                                <h3>The Bitter Silence of God</h3>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h4>The Bitter Silence of God</h4>
+                            <p>The blind man was the only human who did not scream at my face. I sat at his feet, and for a moment, his hands on my brow made me feel human. But when the sighted returned, the illusion shattered. They saw a demon threatening their patriarch and struck me down. I did not fight back; I only wept. I returned to the ruins of Victor’s lab and found his journals. I read how I was built from the "discarded," a patchwork of corpses from the Crimean War. I realized I was not a miracle of science, but a tragedy of architecture. My love for humanity died that day, replaced by a yearning for the man who had abandoned me.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<!--Chapter flashcard 5-->
+<br>
+            <div class="chronicles-grid">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Assets/basemant.jpg" alt="The Catalyst of Mercy">
+                            <div class="content">
+                                <span class="num">Chapter 5</span>
+                                <h3>The Catalyst of Mercy</h3>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h4>The Catalyst of Mercy</h4>
+                            <p>In this world of gray, only Elizabeth looked at me without horror. She was the one who truly taught me language, whispering her name to me as the second word I ever knew. While Victor looked at me with scorn, she saw the "softness" beneath the scars. She became the catalyst for the storm to come. I did not want to kill; I only wanted a companion, someone who could look at my stitched skin and see a reflection of themselves. I demanded that Victor build me a mate. I promised that if he gave me love, I would vanish. But Victor, blinded by his own narcissism, could not conceive of a monster deserving peace.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<!--Chapter flashcard 6-->
+<br>
+            <div class="chronicles-grid">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Assets/elizabeth death.jpg" alt="The Red Wedding">
+                            <div class="content">
+                                <span class="num">Chapter 6</span>
+                                <h3>The Red Wedding</h3>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h4>The Red Wedding</h4>
+                            <p>The tragedy was not born of my malice, but of Victor's fear. On the night of the wedding, I came to him one last time. In the chaos and the flickering candlelight, Victor’s own hand brought the darkness. He fired a pistol intended for me, but the lead found Elizabeth instead. She died in my arms in a cold cave, whispering that she had finally found the peace she had been searching for. I watched the light leave her eyes, and my grief turned into a final, stoic fury. Victor had taken my chance at a mate, so I took his chance at a family. I led him North, ensuring he felt every ounce of the isolation he had given me.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<!--Chapter flashcard 7-->            
+<br>
+            <div class="chronicles-grid">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Assets/last.webp" alt="The Rising Sun">
+                            <div class="content">
+                                <span class="num">Chapter 7</span>
+                                <h3>The Rising Sun</h3>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h4>The Rising Sun</h4>
+                            <p>Now we are here, at the edge of the world. Victor lies dying on this ship, and at last, the cycle of "generational pain" is broken. He called me "son" with his final breath, asking for the forgiveness he never gave. I gave it to him. I am a creature that cannot die, but I am no longer a creature that hates. I used my strength to break the ice and free these sailors, for they are not part of our war. As the sun rises over the Arctic, I walk into the light. I am a broken thing, but as the poet said, the heart will break, yet brokenly live on. I am alive, and finally, I am free.</p>
+                    </div>
+                </div>
+            </div>     
+        </section>
+    </main>
+
+
+
+<!--Creating the section for sign up form-->
+<section id="page-signup" class="page-node hidden-page form-page">
+    <div class="glass-panel">
+        <h2>Create Profile</h2>
+        <p class="sub">Join the Archive</p>
+        <form>
+            <input type="text" id="signup-name" placeholder="Full Name">
+            <input type="email" id="signup-email" placeholder="Email Address">
+            <input type="password" id="signup-password" placeholder="Password">
+            <button type="button" id="signup-btn" class="btn-submit">Register</button>
+        </form>
+        <p class="form-footer">Already have an account? <a href="javascript:void(0)" onclick="showPage('page-login')" class="form-link">Login</a></p>
+    </div>
+</section>
+<!--Creating the section for login form-->
+<section id="page-login" class="page-node hidden-page form-page">
+    <div class="glass-panel">
+        <h2>Welcome Back</h2>
+        <p class="sub">Access the Lab</p>
+        <form>
+            <input type="email" id="login-email" placeholder="Email Address">
+            <input type="password" id="login-password" placeholder="Password">
+            <button type="button" id="login-btn" class="btn-submit">Sign In</button>
+        </form>
+        <p class="form-footer">New to the archive? <a href="javascript:void(0)" onclick="showPage('page-signup')" class="form-link">Sign Up</a></p>
+    </div>
+</section>
+<!--Creating the footer of the page-->
+<footer>
+    © 2026 Frankenstein Web Archive | Mary Shelley 1818 | Designed & Created by Ambreen
+</footer>
+<!--Adding the script to make it interactive-->
+    <script src="script.js"></script>
+</body>
+</html>
